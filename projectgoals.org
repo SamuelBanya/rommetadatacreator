@@ -1,0 +1,32 @@
+** Project A (Python): ROM Metadata Creator
+**** Overall Project Goals
+1. Scan a small set of NES/SNES/Gameboy ROMs
+2. Generate JSON + CSV with file names, hashes, and sizes
+*** Week 1
+**** Goals
+1. Research file related & hash file Python modules
+- Use this Python module to obtain information about the current filepath
+- Pathlib:
+- https://docs.python.org/3/library/pathlib.html#pathlib.WindowsPath
+- Use this Python module for determining a file hash:
+- https://docs.python.org/3/library/hashlib.html
+
+2. Outline parsing strategy:
+- This will involve basic file parsing techniques in Python which are pretty simple in comparison
+- This is so we can determine the file name, hash, and file size
+- The file name and file size is easy, and most likely from the 'OS' related Python libraries
+- However, the hash itself is something completely new to me, so this will require a bit of research to generate.
+*** Week 2–3
+**** Goals
+1. Add a simple wizard that asks the user a few things, and saves the config settings to a file that is dumped to the same directory that the Python script is run in
+2. Implement folder scanning + JSON/CSV output
+
+Wizard Questions For User:
+- 1. Ask For OS (Windows, Mac, or Linux)
+- 2. Ask user what specific console they are trying to use so we know what types of files to scan (1: NES, 2: SNES, 3: Gameboy)
+- 3. Depending on what the user said for #2, add user prompts to ask for specific folder directories since that is crucial, and very specific to each user's ROM directory setups
+
+*** Week 4
+**** Goals
+- Package as CLI tool
+- Add sample dataset + README
