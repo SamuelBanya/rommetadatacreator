@@ -1,7 +1,8 @@
 import platform
+from pathlib import Path
 
 def directoryWizard():
-    directory_wizard_dict = {'os_name': '', 'directory_location': ''};
+    directory_wizard_dict = {'os_name': '', console_decision: '', 'directory_location': ''};
     # Values include 'Windows', 'Darwin', and 'Linux'
     os_name = platform.system()
     print(f"CHECK: os_name: {os_name}");
@@ -11,23 +12,46 @@ def directoryWizard():
     print("\n\nTESTING: user's choice for directory_location: " + directory_location);
 
     directory_wizard_dict['os_name'] = os_name;
+    if console_decision == 1:
+        directory_wizard_dict['console_decision'] = 'NES';
+
+    elif console_decision == 2:
+        directory_wizard_dict['console_decision'] = 'SNES';
+
+    elif console_decision == 3:
+        directory_wizard_dict['console_decision'] = 'Gameboy';
+
     directory_wizard_dict['directory_location'] = directory_location;
 
     return directory_wizard_dict;
 
-def obtainFileInfo():
+def obtainFileInfo(dir_dict):
     # Determine matching file names:
     # Determine hashes of matching files
     # Determine sizes of matching files
+    # NES:
+    # Check for '.nes' files
+    if dir_dict['console_decision'] == 'NES':
+        # Current file directory:
+        current_directory = Path.cwd();
+        nes_path = Path.joinpath(current_directory, dir_dict['directory_location']);
+        for child in nes_path.iterdir():
+            print('child: ', child);
+
+    # SNES
+    # Check for '.SMC' or '.SFC' files
+    if dir_dict['console_decision'] == 'SNES':
+        pass;
+
+    # Gameboy
+    # Check for '.gb' files:
+    if dir_dict['console_decision'] == 'Gameboy':
+        pass;
     pass;
 
 def main():
-    directory_wizard_dic = directoryWizard();
-    print("TEST WITHIN main(): ");
-    print("directoryWizard: ", directoryWizard);
-    print("directoryWizard['os_name']: ", directory_wizard_dic['os_name']);
-    print("directoryWizard['directory_location']: ", directory_wizard_dic['directory_location']);
-    obtainFileInfo();
+    dir_dict = directoryWizard();
+    obtainFileInfo(dir_dict);
 
 if __name__ == '__main__':
     main();
