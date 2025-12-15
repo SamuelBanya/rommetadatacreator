@@ -31,7 +31,6 @@ Wizard Questions For User:
   sam@Tinas-MacBook-Air ~/hub/rommetadatacreator (main) $ python3 -m venv .venv
 #+end_src
 
-<2025-12-15 Mon 15:24>: Overall, the progress has been good on this project, and pretty much ready for deployment to a test environment that showcases it somehow.
 
 *** Week 4
 **** Goals
