@@ -26,6 +26,11 @@ Wizard Questions For User:
 - 2. Ask user what specific console they are trying to use so we know what types of files to scan (1: NES, 2: SNES, 3: Gameboy)
 - 3. Depending on what the user said for #2, add user prompts to ask for specific folder directories since that is crucial, and very specific to each user's ROM directory setups
 
+<2025-12-15 Mon 13:42>: NOTE: This was the command I used to create the Python virtual environment for reference (aka .venv):
+#+begin_src bash
+  sam@Tinas-MacBook-Air ~/hub/rommetadatacreator (main) $ python3 -m venv .venv
+#+end_src
+
 *** Week 4
 **** Goals
 - Package as CLI tool
