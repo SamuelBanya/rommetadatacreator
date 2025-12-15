@@ -31,7 +31,6 @@ Wizard Questions For User:
   sam@Tinas-MacBook-Air ~/hub/rommetadatacreator (main) $ python3 -m venv .venv
 #+end_src
 
-
 *** Week 4
 **** Goals
 - Package as CLI tool
