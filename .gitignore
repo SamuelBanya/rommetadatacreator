@@ -3,6 +3,9 @@ NES/
 SNES/
 Gameboy/
 
+# Add 'DS_Store' to prevent git adding Mac specific files:
+.DS_Store
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
