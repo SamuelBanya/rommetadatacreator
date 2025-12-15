@@ -10,8 +10,12 @@ def directoryWizard():
     directory_wizard_dict = {'os_name': '', 'console_decision': '', 'directory_location': '', 'console_path': ''};
     # Values include 'Windows', 'Darwin', and 'Linux'
     os_name = platform.system()
-    print(f"CHECK: os_name: {os_name}");
-    print(f"I see you are using {os_name} for your operating system");
+
+    if os_name == 'Darwin':
+        print("I see you are using MacOS for your operating system");
+    elif os_name != 'Darwin':
+        print(f"I see you are using {os_name} for your operating system");
+
     console_decision = input("\n\nWhat specific console are you scanning ROM metadata for?\n\nChoices include: '1': NES, '2': SNES, '3': Gameboy\n");
     directory_location = input("\n\nWithin the current directory where you are running this script, what is the name of the folder you want to scan for ROM's?\n");
 
